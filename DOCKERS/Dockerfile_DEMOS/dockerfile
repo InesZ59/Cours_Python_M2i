@@ -1,0 +1,21 @@
+FROM alpine:latest
+
+# Infos
+LABEL org.opencontainers.image.title="DEMO Alpine Docker"
+LABEL org.opencontainers.image.description="Image Alpine perso avec Git et Nano"
+
+#  Commandes
+RUN apk update
+RUN apk add git 
+RUN apk add nano
+
+# commande exécuter lors du lancement du container 
+CMD ["sleep","infinity"] 
+
+# commande pour executer le docker file et donc créer son image 
+# utiliser le "." pour préciser la création de l'image où l'on se trouve
+# toujours se mettre dans le dossier qui contient le dockerfile 
+# docker build -t mon-image . 
+
+
+# docker run -d mon-image

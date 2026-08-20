@@ -1,0 +1,18 @@
+FROM nginx
+
+# Définit le dossier de travail dans le conteneur (équivalent à un cd dans un terminal)
+WORKDIR /usr/share/nginx/html
+
+# "./* : ".": là ou je suis et "/*" : je prends tout le contenu"
+RUN rm -rf ./*
+
+COPY ./index.html .
+
+EXPOSE 80
+
+#nginx -g daemon off
+CMD ["nginx","-g","daemon off;"]
+
+# docker build -t site-perso:v1 .
+
+# docker run -p 80:80 --name site site-perso:v1

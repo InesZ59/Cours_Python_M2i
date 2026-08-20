@@ -1,0 +1,12 @@
+#Permet d'ignore des fichiers lors d'un transfert de fichiers
+#exemple
+
+LICENSE.txt
+
+READ.txt
+
+*.txt ==> tous les fichiers qui se terminent en .txt
+
+.env 
+
+.dockerignore (à mettre aussi dans le fichier pour qu'il ne soit pas transféré)

@@ -1,0 +1,19 @@
+#cloud-config
+packages:
+  - htop
+  - tree
+  - curl
+  - nano
+write_files:
+  - path: /etc/motd
+    permissions: '0644'
+    content: |
+      ==========================
+      Bienvenue sur srv-linux : UBUNTU server 24.04 LTS
+      Formation administrateur cloud 2026
+      Fil conducteur : - automatisation, supervision, securité
+      ============================
+
+
+
+
