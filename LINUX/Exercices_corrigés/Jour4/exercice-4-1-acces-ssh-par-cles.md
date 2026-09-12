@@ -76,16 +76,14 @@ Toujours sur la VM, préparez le terrain pour `deploy`. La clé publique doit fi
    ```bash
    sudo chmod 700 /home/deploy/.ssh
    sudo chmod 600 /home/deploy/.ssh/authorized_keys
-   sudo chown -R deploy:deploy /home/deploy/.ssh ==> changement de propriétaire et de groupe de fichier 
+   sudo chown -R deploy:deploy /home/deploy/.ssh
    ```
 4. Contrôlez : `sudo ls -la /home/deploy/.ssh` doit montrer `drwx------` pour le répertoire et `-rw-------` pour le fichier, propriétaire `deploy`.
 
 Depuis le **poste hôte**, testez :
 
 ```bash
-ssh -i ~/.ssh/formation_ed25519 deploy@IP-VM ==> "on est connecté à la machine en ssh"
-@IP-VM adresse "IPV4" dans l'exercice 172.29.111.246
-poste hôte = "hors srv-linux"
+ssh -i ~/.ssh/formation_ed25519 deploy@IP-VM
 ```
 
 À la première connexion, répondez `yes` à la question sur l'empreinte de la clé du serveur. Vous devez arriver sur un prompt `deploy@srv-linux:~$` **sans** saisie de mot de passe (la passphrase de la clé, si vous en avez mis une, peut être demandée : ce n'est pas le mot de passe du compte). Déconnectez-vous avec `exit`.
