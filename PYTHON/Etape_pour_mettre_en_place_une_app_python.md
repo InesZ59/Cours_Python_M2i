@@ -41,13 +41,14 @@ Le dossier obtenu doit s'appeler :
 
 Si votre dépôt porte un autre nom, adaptez les chemins dans `mon-api.service`.
 
-## 3. Entrer dans le projet #Important
+## 3. Entrer dans le projet
 
 ```bash
 cd /home/ec2-user/mon-api-python
 ```
 
-## 4. Créer l'environnement virtuel Python 
+## 4. Créer l'environnement virtuel Python  #Important pour info 
+Il faut être capable de chercher les ports où va fonctionner l'app (indice ne pas hésiter d'aller dans app.py)
 
 ```bash
 python3 -m venv venv
